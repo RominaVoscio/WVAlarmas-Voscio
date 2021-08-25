@@ -1,0 +1,79 @@
+  /*Aplicando FLexbox a la seccion de servicios */
+
+.contenedorServiciosIndex{
+    display: flex;
+    flex-direction: row;
+    background-color: $color2;
+    height: 300px ;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 70px;
+    }
+@media(max-whidth: 970px){
+    .contenedorServiciosIndex{
+        display: flex;
+        flex-direction: column;
+        background-color: $color2;
+        height: 700px ;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px;
+    }
+}
+
+.contenedorH2-1{
+    display: flex;
+    background-image: url(Imagenes/casita.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px solid $color4;
+    box-shadow: 0 0 10px #333;
+    }
+.contenedorH2-1:hover{
+    transform: scale(1.2);
+    transition: all 800ms;
+    box-shadow: 0 0 10px #333;
+    }
+.contenedorH2-2{
+    display: flex;
+    background-image: url(Imagenes/negocio.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px solid $color4;
+    box-shadow: 0 0 10px #333;
+    }
+.contenedorH2-2:hover{
+    transform: scale(1.2);
+    transition: all 800ms;
+    box-shadow: 0 0 10px #333;
+    }  
+.contenedorH2-3{
+    display: flex;
+    background-image: url(Imagenes/servicioMonitoreo.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+    justify-content: space-around;
+    align-items: center;
+    border:  3px solid $color4;
+    box-shadow: 0 0 10px #333;
+    }
+.contenedorH2-3:hover{
+    transform: scale(1.2);
+    transition: all 800ms;
+    box-shadow: 0 0 10px #333;
+    }
+.listaServicios{
+        list-style-position: inside;
+    }
+
+/*Flexbox servicios fin*/

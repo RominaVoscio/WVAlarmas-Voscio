@@ -1,0 +1,29 @@
+.body404{
+    background-image: url(imagenes/fondo404_2.png);
+    background-color: $color2;
+    background-position: center;
+    background-size: cover;
+}
+.p__error--estilo{
+    text-align: center;
+    color: orangered;
+    font-family: 'Merienda', cursive;
+    font-style: italic;
+    font-size:2em;
+    padding-top: 1em;
+}
+.h2__error--estilo{
+    text-align: center;
+    color:orangered;
+    font-size: 10em;
+    font-family: 'Merienda', cursive;
+    text-shadow: 0 0 10px #333;
+    background-image: url(imagenes/flecha.png);
+    text-decoration: none;
+}
+
+.h2__error--estilo:hover{
+    color:white;
+    text-decoration: none;
+    }
+

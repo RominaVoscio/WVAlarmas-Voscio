@@ -1,0 +1,211 @@
+@import "_variables.scss";
+
+@import "_tipografia.scss";
+
+@import "_estilo404.scss";
+
+
+/*inicio header*/
+/*pongo color a mi header*/
+header{
+	background-image: radial-gradient($color2,$color3);
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.header__h1--centrado{
+	display:  flex;
+	align-items: center;
+	justify-content: left;
+}
+.centrado{
+	text-align: center;
+}
+
+.letra{
+	color: black;
+}
+.colorFondo{
+	background-color: $color2;
+}
+/*animacion del Logo*/
+.animationLogo{
+    animation-duration: 2s;
+    animation-name: transformTamaño;
+    /*animation-iteration-count: infinite;*/
+}
+@keyframes transformTamaño{
+    0%{
+        transform: scale(0.5);
+    }
+    50%{
+        transform: scale(1.0);
+        transform:  translate(20px);
+        transform: rotate(90deg);
+    }
+    100%{
+        transform:  scale(1.3);
+        transform:  translate(50px);
+        transform: rotate(360deg);
+    }
+}
+/*Fin animacion Logo*/
+@media(max-whidth: 768px){
+.contenedor{
+	width: 50%;
+	height: 30%;
+	justify-content: center;
+	align-items: center;
+}
+}
+/*Fin seccion header*/
+// navegador todo bootstrap
+/*carrousel bootstrap*/
+.carousel-item {
+	height: 32rem;
+}
+.carousel-item > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	height: 32rem;
+}
+/*Fin carrousel*/
+
+
+.imagenContacto{
+    background-color: $color2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@import "_contenedorServicios.scss";
+
+
+.contenedorPrincipalEmpresa{
+    display:  flex;
+    flex-direction: column;
+    background-color: $color2;
+    height: 300px;
+    width:  400px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+/*Flexbox Pregunta inicio*/
+.contenedorPregunta{
+    display: flex;
+    flex-direction: column;
+    background-color: $color1;
+    width: 50%;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+/*flexbox pregunta fin*/
+@media (max-width: 950px){
+	.contenedorPregunta_titulo{
+		font-size: 1.5rem;
+	}
+}
+@media (max-width: 768px){
+	.contenedorPregunta_titulo{
+		font-size: 1.2rem;
+    }
+}
+.listadoPregunta{
+    text-align: center;
+    list-style-type: none ;
+    color: $color4;
+    font-style: italic;
+    font-weight: bold;
+}
+/*contenedor pie de página*/
+.footer__contenedor{
+    display:  flex;
+    flex-direction: row;
+    background-color: $color4; 
+    width: 100%; 
+    height: 120px;
+    padding: 10px;
+}
+
+.footerLeft{
+    width: 50%;
+    height: 100px;
+    background-color: $color4;
+    float: left;
+    i{
+        color: $color2;
+        font-size: $tamFuente-l;
+        background-color: $color4;
+        margin: 10px;
+    }
+    i:nth-child(2){
+        color:  green;
+    }
+    i:nth-child(3){
+        color:  blue;
+    }
+    i:nth-child(4){
+        color:  violet;
+    }
+}
+//utilación de map y each en index.html
+$colors:(
+    whatsapp: lightgreen,
+    facebook: lightblue,
+    instagram: pink
+);                        
+@each $name-color, $color in $colors{
+    .#{$name-color}--color{
+        color: $color;
+        font-size: $tamFuente-s;
+        font-style: italic;
+    }
+}
+
+.footerRight{
+    width: 50%;
+    height: 100px;
+    background-color: $color4;
+    float: right;
+    padding: 20px;
+}
+
+.div_contenedorCreadorWeb--color{
+    background-image: linear-gradient($color4, $color1);
+}
+/*fin pie de pagina*/
+
+.list{
+    font-weight: bold;
+}
+
+.noLink{
+    text-decoration: none;
+}
+/*--link de la Pagina servicios--*/
+.contenedorLink{
+    display:flex;
+    flex-direction: column;
+    font-size: $tamFuente-m;
+    padding: 20px;
+    height: 100px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    a:hover{
+        background-color: $color4;
+        color: $color2;
+    }
+}
+/*--fin link pagina Servicio--*/
+@import "_paginaContacto.scss";
+@import "_paginaServicios.scss";

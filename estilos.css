@@ -1,0 +1,594 @@
+@charset "UTF-8";
+/* fuentes de letras o estilos*/
+.header__h1--estiloFuente {
+  font-family: "Playfair Display", serif;
+  font-size: 62px;
+  font-weight: bold;
+}
+
+.contenedorPregunta__h2--titulo {
+  background-color: lightgray;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.h3--fuenteEstilo3 {
+  font-family: sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.h3--fuenteEstilo4 {
+  font-family: sans-serif;
+  font-style: italic;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.fuenteEstiloParrafo {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+.interlineado {
+  line-height: 30px;
+}
+
+.textoCentrado {
+  text-align: center;
+}
+
+.footer__h4--estiloTipografia {
+  background-color: black;
+  color: white;
+  font-family: "Style Script", cursive;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.footer__p--infoTipografia {
+  background-color: black;
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.textoOferta {
+  text-align: center;
+  font-size: 28px;
+  background-position: center;
+  color: red;
+  padding: 30px;
+}
+
+.div__p--tipografiaCreadorWeb {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+
+.section__h3--fuenteEstiloContacto {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: black;
+  font-size: 62px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/*fin fuentes de letras o estilos*/
+.body404 {
+  background-image: url(imagenes/fondo404_2.png);
+  background-color: white;
+  background-position: center;
+  background-size: cover;
+}
+
+.p__error--estilo {
+  text-align: center;
+  color: orangered;
+  font-family: "Merienda", cursive;
+  font-style: italic;
+  font-size: 2em;
+  padding-top: 1em;
+}
+
+.h2__error--estilo {
+  text-align: center;
+  color: orangered;
+  font-size: 10em;
+  font-family: "Merienda", cursive;
+  text-shadow: 0 0 10px #333;
+  background-image: url(imagenes/flecha.png);
+  text-decoration: none;
+}
+
+.h2__error--estilo:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/*inicio header*/
+/*pongo color a mi header*/
+header {
+  background-image: radial-gradient(white, gray);
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.header__h1--centrado {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.centrado {
+  text-align: center;
+}
+
+.letra {
+  color: black;
+}
+
+.colorFondo {
+  background-color: white;
+}
+
+/*animacion del Logo*/
+.animationLogo {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: transformTamaño;
+          animation-name: transformTamaño;
+  /*animation-iteration-count: infinite;*/
+}
+
+@-webkit-keyframes transformTamaño {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+    transform: translate(20px);
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: scale(1.3);
+    transform: translate(50px);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes transformTamaño {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+    transform: translate(20px);
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: scale(1.3);
+    transform: translate(50px);
+    transform: rotate(360deg);
+  }
+}
+/*Fin animacion Logo*/
+@media (max-whidth: 768px) {
+  .contenedor {
+    width: 50%;
+    height: 30%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/*Fin seccion header*/
+/*carrousel bootstrap*/
+.carousel-item {
+  height: 32rem;
+}
+
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+/*Fin carrousel*/
+.imagenContacto {
+  background-color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Aplicando FLexbox a la seccion de servicios */
+.contenedorServiciosIndex {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  height: 300px;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 70px;
+}
+
+@media (max-whidth: 970px) {
+  .contenedorServiciosIndex {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 700px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+  }
+}
+.contenedorH2-1 {
+  display: flex;
+  background-image: url(Imagenes/casita.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 200px;
+  justify-content: space-around;
+  align-items: center;
+  border: 3px solid black;
+  box-shadow: 0 0 10px #333;
+}
+
+.contenedorH2-1:hover {
+  transform: scale(1.2);
+  transition: all 800ms;
+  box-shadow: 0 0 10px #333;
+}
+
+.contenedorH2-2 {
+  display: flex;
+  background-image: url(Imagenes/negocio.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 200px;
+  justify-content: space-around;
+  align-items: center;
+  border: 3px solid black;
+  box-shadow: 0 0 10px #333;
+}
+
+.contenedorH2-2:hover {
+  transform: scale(1.2);
+  transition: all 800ms;
+  box-shadow: 0 0 10px #333;
+}
+
+.contenedorH2-3 {
+  display: flex;
+  background-image: url(Imagenes/servicioMonitoreo.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 200px;
+  justify-content: space-around;
+  align-items: center;
+  border: 3px solid black;
+  box-shadow: 0 0 10px #333;
+}
+
+.contenedorH2-3:hover {
+  transform: scale(1.2);
+  transition: all 800ms;
+  box-shadow: 0 0 10px #333;
+}
+
+.listaServicios {
+  list-style-position: inside;
+}
+
+/*Flexbox servicios fin*/
+.contenedorPrincipalEmpresa {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: 300px;
+  width: 400px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
+
+/*Flexbox Pregunta inicio*/
+.contenedorPregunta {
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+  width: 50%;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/*flexbox pregunta fin*/
+@media (max-width: 950px) {
+  .contenedorPregunta_titulo {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .contenedorPregunta_titulo {
+    font-size: 1.2rem;
+  }
+}
+.listadoPregunta {
+  text-align: center;
+  list-style-type: none;
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/*contenedor pie de página*/
+.footer__contenedor {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+}
+
+.footerLeft {
+  width: 50%;
+  height: 100px;
+  background-color: black;
+  float: left;
+}
+.footerLeft i {
+  color: white;
+  font-size: 28px;
+  background-color: black;
+  margin: 10px;
+}
+.footerLeft i:nth-child(2) {
+  color: green;
+}
+.footerLeft i:nth-child(3) {
+  color: blue;
+}
+.footerLeft i:nth-child(4) {
+  color: violet;
+}
+
+.whatsapp--color {
+  color: lightgreen;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.facebook--color {
+  color: lightblue;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.instagram--color {
+  color: pink;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.footerRight {
+  width: 50%;
+  height: 100px;
+  background-color: black;
+  float: right;
+  padding: 20px;
+}
+
+.div_contenedorCreadorWeb--color {
+  background-image: linear-gradient(black, lightgray);
+}
+
+/*fin pie de pagina*/
+.list {
+  font-weight: bold;
+}
+
+.noLink {
+  text-decoration: none;
+}
+
+/*--link de la Pagina servicios--*/
+.contenedorLink {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  padding: 20px;
+  height: 100px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contenedorLink a:hover {
+  background-color: black;
+  color: white;
+}
+
+/*--fin link pagina Servicio--*/
+/*contenedor para el sector contacto/ Aplicando flexbox*/
+.contenedorContacto {
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+  align-items: center;
+  border: 2px solid black;
+  padding: 10px;
+  width: 400px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px #333;
+}
+
+/*Fin contenedor contacto*/
+/*inicio contenedor Pagina Servicios*/
+.contServicios {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
+}
+
+/*aplicando Grids a la sección Producto*/
+.sectionProductos {
+  background-color: gray;
+  width: 90%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-template-rows: repeat(2, 2fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px #333;
+}
+
+.item {
+  background-color: darkorange;
+  font-size: 20px;
+  color: black;
+  border: 2px solid black;
+  min-height: 200px;
+  min-width: 200px;
+}
+
+.item:hover {
+  transform: scale(1.2);
+  transition: all 800ms;
+  filter: grayscale(1);
+}
+
+.item1 {
+  text-align: center;
+  background-image: url(Imagenes/combo1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item2 {
+  list-style-position: inside;
+  padding: 3px;
+}
+
+.item3 {
+  text-align: center;
+  background-image: url(Imagenes/combo3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item4 {
+  list-style-position: inside;
+  padding: 3px;
+}
+
+.item5 {
+  list-style-position: inside;
+  padding: 3px;
+}
+
+.item6 {
+  text-align: center;
+  background-image: url(Imagenes/combo2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item7 {
+  list-style-position: inside;
+  padding: 3px;
+}
+
+.item8 {
+  text-align: center;
+  background-image: url(Imagenes/camaras.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/*fin de Grids en la sección Producto*/
+/*Aplicando fondo a mi pagina oferta.html*/
+.bodyDegrade {
+  background-image: linear-gradient(gray, darkorange, gray);
+}
+
+/*centrando todo el cuerpo principal de mi página ofertas*/
+.cuerpoCentrado {
+  display: grid;
+  place-items: center;
+}
+
+/*Inicio Grids de la sección Oferta*/
+.contenedorOfertas {
+  background-color: gray;
+  width: auto;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px #333;
+}
+
+.items {
+  background-color: darkorange;
+  font-size: 20px;
+  color: black;
+  border: 2px solid black;
+  min-height: 200px;
+  min-width: 200px;
+}
+
+.items:hover {
+  transform: scale(1.2);
+  transition: all 800ms;
+}
+
+/*Aplidando bucle  a Ofertas*/
+.item-1 {
+  background-image: url(Imagenes/imagen1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item-2 {
+  background-image: url(Imagenes/imagen2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item-3 {
+  background-image: url(Imagenes/imagen3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item-4 {
+  background-image: url(Imagenes/imagen4.jpg);
+  background-size: cover;
+  background-position: center;
+}/*# sourceMappingURL=estilos.css.map */
