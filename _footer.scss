@@ -38,7 +38,7 @@ $colors:(
 @each $name-color, $color in $colors{
     .#{$name-color}--color{
         color: $color;
-        font-size: $tamFuente-s;
+        font-size: $tamFuente-xs;
         font-style: italic;
     }
 }
@@ -52,54 +52,8 @@ $colors:(
 }
 .div_contenedorCreadorWeb--color{
     background-image: linear-gradient($color4, $color1);
+    padding-top: 1em;
 }
 /*fin pie de pagina*/
 
 
-/*contenedor pie de página
-.footer__contenedor{
-    display:  flex;
-    flex-direction: row;
-    background-color: $color4; 
-    width: 100%; 
-    height: 120px;
-    padding: 10px;
-}
-.fleft{
-    width: 50%;
-    height: 100px;
-    background-color: $color4;
-    float: left;
-    i{
-        color: green;
-        font-size: $tamFuente-l;
-        background-color: $color4;
-        margin: 10px;
-    }
-    i:nth-child(2){
-        color:  green;
-    }
-    i:nth-child(3){
-        color:  blue;
-    }
-    i:nth-child(4){
-        color:  violet;
-    }
-}
-
-.fright{
-    width: 50%;
-    height: 100px;
-    background-color: $color4;
-    float: right;
-    padding: 20px;
-}
-
-.info{
-    background-color: $color4;
-    color: $color2;
-    font-size: $tamFuente-s;
-    justify-content: center;
-    text-align: center;
-}
-fin pie de pagina*/
