@@ -1,0 +1,43 @@
+/*Flexbox Pregunta inicio*/
+.contenedorPregunta{
+    display: flex;
+    flex-direction: column;
+    background-color: $color2;
+    width: 50%;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+/*flexbox pregunta fin*/
+@media (max-width: 950px){
+	.contenedorPregunta_titulo{
+		font-size: 1.5rem;
+	}
+}
+@media (max-width: 768px){
+	.contenedorPregunta_titulo{
+		font-size: 1.2rem;
+    }
+    .contenedorPregunta{
+        display: flex;
+        flex-direction: column;
+        background-color: $color2;
+        width: vh;
+        height: 150px;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+.listadoPregunta{
+    text-align: center;
+    list-style-type: none ;
+    color: $color4;
+    font-style: italic;
+    font-weight: bold;
+}

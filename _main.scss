@@ -1,0 +1,54 @@
+/*inicio header*/
+/*pongo color a mi header*/
+header{
+	background-image: radial-gradient($color2,$color3);
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.header__h1--centrado{
+	display:  flex;
+	align-items: center;
+	justify-content: left;
+}
+.centrado{
+	text-align: center;
+}
+
+.letra{
+	color: black;
+}
+.colorFondo{
+	background-color: $color2;
+}
+/*animacion del Logo*/
+.animationLogo{
+    animation-duration: 2s;
+    animation-name: transformTamaño;
+    /*animation-iteration-count: infinite;*/
+}
+@keyframes transformTamaño{
+    0%{
+        transform: scale(0.5);
+    }
+    50%{
+        transform: scale(1.0);
+        transform:  translate(20px);
+        transform: rotate(90deg);
+    }
+    100%{
+        transform:  scale(1.3);
+        transform:  translate(50px);
+        transform: rotate(360deg);
+    }
+}
+/*Fin animacion Logo*/
+@media(max-whidth: 768px){
+.contenedor{
+	width: 50%;
+	height: 30%;
+	justify-content: center;
+	align-items: center;
+}
+}
+/*Fin seccion header*/

@@ -119,3 +119,19 @@
                 
     }
 }
+/*--link de la Pagina servicios--*/
+.contenedorLink{
+    display:flex;
+    flex-direction: column;
+    font-size: $tamFuente-m;
+    padding: 20px;
+    height: 100px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    a:hover{
+        background-color: $color4;
+        color: $color2;
+    }
+}
+/*--fin link pagina Servicio--*/

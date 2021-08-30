@@ -1,0 +1,11 @@
+.contenedorPrincipalEmpresa{
+    display:  flex;
+    flex-direction: column;
+    background-color: $color2;
+    height: 300px;
+    width:  400px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
