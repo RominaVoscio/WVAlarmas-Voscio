@@ -7,17 +7,26 @@
 }
 
 .contenedorPregunta__h2--titulo {
-  background-color: lightgray;
   text-align: center;
   font-family: sans-serif;
   font-size: 24px;
   font-weight: bold;
+  color: white;
+  text-shadow: 0 0 10px #333;
+}
+
+.h3--fuenteEstilo2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 62px;
+  font-weight: bold;
+  color: white;
 }
 
 .h3--fuenteEstilo3 {
-  font-family: sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 28px;
   font-weight: bold;
+  color: black;
 }
 
 .h3--fuenteEstilo4 {
@@ -118,6 +127,7 @@ header {
   background-image: radial-gradient(white, gray);
   padding-top: 1%;
   padding-bottom: 1%;
+  height: auto;
 }
 
 .header__h1--centrado {
@@ -140,27 +150,9 @@ header {
 
 /*animacion del Logo*/
 .animationLogo {
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-name: transformTamaño;
-          animation-name: transformTamaño;
+  animation-duration: 2s;
+  animation-name: transformTamaño;
   /*animation-iteration-count: infinite;*/
-}
-
-@-webkit-keyframes transformTamaño {
-  0% {
-    transform: scale(0.5);
-  }
-  50% {
-    transform: scale(1);
-    transform: translate(20px);
-    transform: rotate(90deg);
-  }
-  100% {
-    transform: scale(1.3);
-    transform: translate(50px);
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes transformTamaño {
@@ -201,122 +193,33 @@ header {
   height: 32rem;
 }
 
-/*Fin carrousel*/
-.imagenContacto {
-  background-color: white;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+@media (max-width: 950px) {
+  .carousel-item {
+    height: 20rem;
+  }
 
-/*Aplicando FLexbox a la seccion de servicios */
-.contenedorServiciosIndex {
-  display: flex;
-  flex-direction: row;
-  background-color: white;
-  height: 300px;
-  justify-content: space-around;
-  align-items: center;
-  padding-left: 70px;
-}
-
-@media (max-whidth: 970px) {
-  .contenedorServiciosIndex {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    height: 700px;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20px;
+  .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 20rem;
   }
 }
-.contenedorH2-1 {
-  display: flex;
-  background-image: url(Imagenes/casita.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 200px;
-  width: 200px;
-  justify-content: space-around;
-  align-items: center;
-  border: 3px solid black;
-  box-shadow: 0 0 10px #333;
-}
-
-.contenedorH2-1:hover {
-  transform: scale(1.2);
-  transition: all 800ms;
-  box-shadow: 0 0 10px #333;
-}
-
-.contenedorH2-2 {
-  display: flex;
-  background-image: url(Imagenes/negocio.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 200px;
-  width: 200px;
-  justify-content: space-around;
-  align-items: center;
-  border: 3px solid black;
-  box-shadow: 0 0 10px #333;
-}
-
-.contenedorH2-2:hover {
-  transform: scale(1.2);
-  transition: all 800ms;
-  box-shadow: 0 0 10px #333;
-}
-
-.contenedorH2-3 {
-  display: flex;
-  background-image: url(Imagenes/servicioMonitoreo.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 200px;
-  width: 200px;
-  justify-content: space-around;
-  align-items: center;
-  border: 3px solid black;
-  box-shadow: 0 0 10px #333;
-}
-
-.contenedorH2-3:hover {
-  transform: scale(1.2);
-  transition: all 800ms;
-  box-shadow: 0 0 10px #333;
-}
-
-.listaServicios {
-  list-style-position: inside;
-}
-
-/*Flexbox servicios fin*/
-.contenedorPrincipalEmpresa {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  height: 300px;
-  width: 400px;
-  padding: 20px;
-  justify-content: center;
-  align-items: center;
-  margin: 10px auto;
-}
-
+/*Fin carrousel*/
 /*Flexbox Pregunta inicio*/
 .contenedorPregunta {
   display: flex;
   flex-direction: column;
   background-color: lightgray;
-  width: 50%;
-  height: 150px;
+  width: 350px;
+  height: auto;
   justify-content: center;
   align-items: center;
   margin: 10px auto;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 50px;
+  text-align: center;
 }
 
 /*flexbox pregunta fin*/
@@ -329,6 +232,19 @@ header {
   .contenedorPregunta_titulo {
     font-size: 1.2rem;
   }
+
+  .contenedorPregunta {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    width: vh;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 }
 .listadoPregunta {
   text-align: center;
@@ -336,8 +252,19 @@ header {
   color: black;
   font-style: italic;
   font-weight: bold;
+  font-size: 20px;
 }
 
+@media (max-width: 700px) {
+  .contenedorPregunta {
+    background-color: darkorange;
+    width: auto;
+  }
+
+  .listadoPregunta {
+    font-size: 24px;
+  }
+}
 /*contenedor pie de página*/
 .footer__contenedor {
   display: flex;
@@ -361,31 +288,10 @@ header {
   margin: 10px;
 }
 .footerLeft i:nth-child(2) {
-  color: green;
+  color: #0a0afa;
 }
 .footerLeft i:nth-child(3) {
-  color: blue;
-}
-.footerLeft i:nth-child(4) {
-  color: violet;
-}
-
-.whatsapp--color {
-  color: lightgreen;
-  font-size: 20px;
-  font-style: italic;
-}
-
-.facebook--color {
-  color: lightblue;
-  font-size: 20px;
-  font-style: italic;
-}
-
-.instagram--color {
-  color: pink;
-  font-size: 20px;
-  font-style: italic;
+  color: #cc0ccc;
 }
 
 .footerRight {
@@ -395,37 +301,19 @@ header {
   float: right;
   padding: 20px;
 }
+.footerRight i {
+  color: #11f711;
+  font-size: 20px;
+  margin: 5px;
+}
 
 .div_contenedorCreadorWeb--color {
   background-image: linear-gradient(black, lightgray);
+  padding: 5px;
+  margin-top: auto;
 }
 
 /*fin pie de pagina*/
-.list {
-  font-weight: bold;
-}
-
-.noLink {
-  text-decoration: none;
-}
-
-/*--link de la Pagina servicios--*/
-.contenedorLink {
-  display: flex;
-  flex-direction: column;
-  font-size: 24px;
-  padding: 20px;
-  height: 100px;
-  width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.contenedorLink a:hover {
-  background-color: black;
-  color: white;
-}
-
-/*--fin link pagina Servicio--*/
 /*contenedor para el sector contacto/ Aplicando flexbox*/
 .contenedorContacto {
   display: flex;
@@ -434,7 +322,7 @@ header {
   align-items: center;
   border: 2px solid black;
   padding: 10px;
-  width: 400px;
+  width: 350px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
@@ -591,4 +479,404 @@ header {
   background-image: url(Imagenes/imagen4.jpg);
   background-size: cover;
   background-position: center;
-}/*# sourceMappingURL=estilos.css.map */
+}
+
+/*--link de la Pagina servicios--*/
+.contenedorLink {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  padding: 20px;
+  height: 100px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contenedorLink a:hover {
+  background-color: black;
+  color: white;
+}
+
+/*--fin link pagina Servicio--*/
+/*Aplicando FLexbox a la seccion de servicios */
+.contenedorServiciosIndex {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  height: 300px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.contenedorH2-1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-image: url(Imagenes/casita.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 200px;
+  align-content: space-around;
+  align-items: center;
+  border: 3px solid black;
+  box-shadow: 0 0 10px #333;
+}
+
+.contenedorH2-1:hover {
+  transform: scale(1.2);
+  transition: all 800ms;
+  box-shadow: 0 0 10px #333;
+}
+
+.contenedorH2-2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-image: url(Imagenes/negocio.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 200px;
+  align-content: space-around;
+  align-items: center;
+  border: 3px solid black;
+  box-shadow: 0 0 10px #333;
+}
+
+.contenedorH2-2:hover {
+  transform: scale(1.2);
+  transition: all 800ms;
+  box-shadow: 0 0 10px #333;
+}
+
+.contenedorH2-3 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-image: url(Imagenes/servicioMonitoreo.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 200px;
+  align-content: space-around;
+  align-items: center;
+  border: 3px solid black;
+  box-shadow: 0 0 10px #333;
+}
+
+.contenedorH2-3:hover {
+  transform: scale(1.2);
+  transition: all 800ms;
+  box-shadow: 0 0 10px #333;
+}
+
+@media (max-whidth: 970px) {
+  .contenedorServiciosIndex {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    height: 300px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+  }
+}
+@media (max-width: 700px) {
+  .contenedorServiciosIndex {
+    display: none;
+  }
+}
+.listaServicios {
+  list-style-position: inside;
+}
+
+/*Flexbox servicios fin*/
+.contenedorPrincipalEmpresa {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: 300px;
+  width: 100%;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
+
+/*aplicando Grids a la sección Producto*/
+.sectionProductos {
+  background-color: gray;
+  width: 90%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-template-rows: repeat(2, 2fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px #333;
+}
+
+.item {
+  background-color: darkorange;
+  font-size: 20px;
+  color: black;
+  border: 2px solid black;
+  min-height: 200px;
+  min-width: 200px;
+}
+
+.item:hover {
+  transform: scale(1.2);
+  transition: all 800ms;
+  filter: grayscale(1);
+}
+
+.item1 {
+  text-align: center;
+  background-image: url(Imagenes/combo1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item2 {
+  list-style-position: inside;
+  padding: 3px;
+}
+
+.item3 {
+  text-align: center;
+  background-image: url(Imagenes/combo3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item4 {
+  list-style-position: inside;
+  padding: 3px;
+}
+
+.item5 {
+  list-style-position: inside;
+  padding: 3px;
+}
+
+.item6 {
+  text-align: center;
+  background-image: url(Imagenes/combo2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item7 {
+  list-style-position: inside;
+  padding: 3px;
+}
+
+.item8 {
+  text-align: center;
+  background-image: url(Imagenes/camaras.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/*fin de Grids en la sección Producto*/
+/*Aplicando fondo a mi pagina oferta.html*/
+.bodyDegrade {
+  background-image: linear-gradient(gray, darkorange, gray);
+}
+
+/*centrando todo el cuerpo principal de mi página ofertas*/
+.cuerpoCentrado {
+  display: grid;
+  place-items: center;
+}
+
+/*Inicio Grids de la sección Oferta*/
+.contenedorOfertas {
+  background-color: gray;
+  width: auto;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px #333;
+}
+
+.items {
+  background-color: darkorange;
+  font-size: 20px;
+  color: black;
+  border: 2px solid black;
+  min-height: 200px;
+  min-width: 200px;
+}
+
+.items:hover {
+  transform: scale(1.2);
+  transition: all 800ms;
+}
+
+/*Aplidando bucle  a Ofertas*/
+.item-1 {
+  background-image: url(Imagenes/imagen1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item-2 {
+  background-image: url(Imagenes/imagen2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item-3 {
+  background-image: url(Imagenes/imagen3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item-4 {
+  background-image: url(Imagenes/imagen4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/*haciendo reponsive la tabla de productos y ofertas*/
+@media (max-width: 1010px) {
+  .sectionProductos {
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(4, 2fr);
+  }
+
+  .item1 {
+    text-align: center;
+    background-image: url(Imagenes/combo2.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .item2 {
+    list-style-position: inside;
+    padding: 3px;
+  }
+
+  .item3 {
+    text-align: center;
+    background-image: url(Imagenes/camaras.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .item4 {
+    list-style-position: inside;
+    padding: 3px;
+  }
+
+  .item5 {
+    list-style-position: inside;
+    padding: 3px;
+  }
+
+  .item6 {
+    text-align: center;
+    background-image: url(Imagenes/combo1.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .item7 {
+    list-style-position: inside;
+    padding: 3px;
+  }
+
+  .item8 {
+    text-align: center;
+    background-image: url(Imagenes/combo3.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media (max-width: 580px) {
+  .sectionProductos {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: auto;
+  }
+
+  .item1 {
+    grid-row: 4;
+    text-align: center;
+    background-image: url(Imagenes/combo2.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .item2 {
+    grid-row: 3;
+    list-style-position: inside;
+    padding: 3px;
+  }
+
+  .item3 {
+    grid-row: 8;
+    text-align: center;
+    background-image: url(Imagenes/camaras.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .item4 {
+    grid-row: 7;
+    list-style-position: inside;
+    padding: 3px;
+  }
+
+  .item5 {
+    grid-row: 1;
+    list-style-position: inside;
+    padding: 3px;
+  }
+
+  .item6 {
+    grid-row: 2;
+    text-align: center;
+    background-image: url(Imagenes/combo1.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .item7 {
+    grid-row: 5;
+    list-style-position: inside;
+    padding: 3px;
+  }
+
+  .item8 {
+    grid-row: 6;
+    text-align: center;
+    background-image: url(Imagenes/combo3.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .contenedorOfertas {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+/*
+.list{
+    font-weight: bold;
+}
+.noLink{
+    text-decoration: none;
+}
+*/
+
+/*# sourceMappingURL=estilos.css.map */

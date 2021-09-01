@@ -20,26 +20,10 @@
         margin: 10px;
     }
     i:nth-child(2){
-        color:  green;
+        color:  rgb(10, 10, 250);
     }
     i:nth-child(3){
-        color:  blue;
-    }
-    i:nth-child(4){
-        color:  violet;
-    }
-}
-//utilación de map y each en index.html
-$colors:(
-    whatsapp: lightgreen,
-    facebook: lightblue,
-    instagram: pink
-);                        
-@each $name-color, $color in $colors{
-    .#{$name-color}--color{
-        color: $color;
-        font-size: $tamFuente-s;
-        font-style: italic;
+        color:  rgb(204, 12, 204);
     }
 }
 
@@ -49,57 +33,15 @@ $colors:(
     background-color: $color4;
     float: right;
     padding: 20px;
+    i{
+        color: rgb(17, 247, 17);
+        font-size: $tamFuente-s;
+        margin: 5px;
+    }
 }
 .div_contenedorCreadorWeb--color{
     background-image: linear-gradient($color4, $color1);
+    padding: 5px;
+    margin-top: auto;
 }
 /*fin pie de pagina*/
-
-
-/*contenedor pie de página
-.footer__contenedor{
-    display:  flex;
-    flex-direction: row;
-    background-color: $color4; 
-    width: 100%; 
-    height: 120px;
-    padding: 10px;
-}
-.fleft{
-    width: 50%;
-    height: 100px;
-    background-color: $color4;
-    float: left;
-    i{
-        color: green;
-        font-size: $tamFuente-l;
-        background-color: $color4;
-        margin: 10px;
-    }
-    i:nth-child(2){
-        color:  green;
-    }
-    i:nth-child(3){
-        color:  blue;
-    }
-    i:nth-child(4){
-        color:  violet;
-    }
-}
-
-.fright{
-    width: 50%;
-    height: 100px;
-    background-color: $color4;
-    float: right;
-    padding: 20px;
-}
-
-.info{
-    background-color: $color4;
-    color: $color2;
-    font-size: $tamFuente-s;
-    justify-content: center;
-    text-align: center;
-}
-fin pie de pagina*/

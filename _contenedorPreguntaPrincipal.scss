@@ -2,14 +2,15 @@
 .contenedorPregunta{
     display: flex;
     flex-direction: column;
-    background-color: $color2;
-    width: 50%;
-    height: 150px;
+    background-color: $color1;
+    width: 350px;
+    height: auto;
     justify-content: center;
     align-items: center;
     margin: 10px auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 50px;
+    text-align: center;
 }
 /*flexbox pregunta fin*/
 @media (max-width: 950px){
@@ -24,9 +25,9 @@
     .contenedorPregunta{
         display: flex;
         flex-direction: column;
-        background-color: $color2;
+        background-color: $color1;
         width: vh;
-        height: 150px;
+        height: auto;
         justify-content: center;
         align-items: center;
         margin: 10px auto;
@@ -40,4 +41,14 @@
     color: $color4;
     font-style: italic;
     font-weight: bold;
+    font-size: $tamFuente-s;
+}
+@media (max-width: 700px){
+    .contenedorPregunta{
+        background-color: $color5;
+        width: auto;
+    }
+    .listadoPregunta{
+        font-size: $tamFuente-m;
+    }
 }

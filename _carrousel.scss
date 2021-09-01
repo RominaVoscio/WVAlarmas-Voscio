@@ -9,4 +9,17 @@
 	min-width: 100%;
 	height: 32rem;
 }
+@media (max-width: 950px) {
+    .carousel-item {
+		height: 20rem;
+	}
+	.carousel-item > img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		min-width: 100%;
+		height: 20rem;
+	}
+	
+}
 /*Fin carrousel*/
