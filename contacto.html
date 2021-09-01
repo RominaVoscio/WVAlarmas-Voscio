@@ -71,20 +71,20 @@
 			</ul>
 		</div>
 	</nav>
-    <!--seccion imagen contacto-->
     <section>
     	<h3 class="section__h3--fuenteEstiloContacto">Contacto</h3>
-    <!--<img src="Imagenes/contacto.jpg" alt="Contacto" class="imagenContacto">-->
     </section>
     <!--seccion formulario-->
     <section class="contenedorContacto rounded">
-        <form>
-			<label for="nombre_apellido"> Nombre y Apellido:</label>
+        <!--<form>
+			<label for="nombre_apellido"></label>
 			<input type="text" name="nombre_apellido" placeholder="Nombre y Apellido" required=""><br>
-			<label for="email"> Email:</label>
+			<label for="email"></label>
 			<input type="text" name="email" placeholder="nombre@ejemplo.com" required=""><br>
-			<label for="celular"> Celular:</label>
-			<input type="number" name="celular" placeholder="Ej: 3416000000" required=""><br>
+			<label for="celular"></label>
+			<input type="number" name="celular" placeholder="celular: 3416000000" required="">
+			<br>
+			<br>
 			<P>Tipo de Propiedad a consultar</P>
 			<select name="Tipo Propiedad">
 				<option value="N">No contesta</option>
@@ -100,9 +100,35 @@
 				Acepta términos y condiciones
 			    <input type="checkbox" name="acepta" value="1">
 		    </div>
-		    <br>
-			<input type="submit" value="Enviar">
-			<input type="reset" value="Borrar">
+		    <br>-->
+		<form>
+			<div class="form-group">
+				<label for="exampleFormControlInput1">Nombre y Apellido</label>
+				<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="nombre apellido" required="">
+				<label for="exampleFormControlInput1">Email</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required="">
+			</div>
+			<div class="form-group">
+				<label for="exampleFormControlSelect2">Tipo de propiedad a consultar</label>
+				<select multiple class="form-control" id="exampleFormControlSelect2">
+					<option>Casa</option>
+					<option>Departamento</option>
+					<option>Edificio</option>
+					<option>Empresa pequeña</option>
+					<option>Pyme</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="exampleFormControlTextarea1">Deje su comentario/ consulta</label>
+				<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+			</div>
+			<br>
+			<div class="form-group center">
+                <input class="btn btn-secondary" type="submit" value="Enviar">
+                <input class="btn btn-secondary" type="reset" value="Reset"> 
+			</div>
+			<!--<input type="submit" value="Enviar">
+			<input type="reset" value="Borrar">-->
 		</form>
     	
     </section>
@@ -122,13 +148,13 @@
     <footer class="footer__contenedor">
     	<div class="footerLeft">
     	    <h4 class="footer__h4--estiloTipografia">Seguinos</h4>
-    	    <i class="fab fa-whatsapp"></i>
     	    <i class="fab fa-facebook"></i>
     	    <i class="fab fa-instagram"></i>
     	</div>
     	<div class="footerRight">
-            <p class="footer__p--infoTipografia">Teléfono 3416000000</p>
-		    <p class="footer__p--infoTipografia">mail:wvalarmas@gmail.com</p>
+            <i class="fab fa-whatsapp">
+				<p class="footer__p--infoTipografia">3416000000</p>
+			</i>
 	</footer>
 	<div class="container-fluid div_contenedorCreadorWeb--color">
         <p class="div__p--tipografiaCreadorWeb"> Website created by Romina Voscio</p>

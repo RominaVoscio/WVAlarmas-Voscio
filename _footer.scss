@@ -20,26 +20,10 @@
         margin: 10px;
     }
     i:nth-child(2){
-        color:  green;
+        color:  rgb(10, 10, 250);
     }
     i:nth-child(3){
-        color:  blue;
-    }
-    i:nth-child(4){
-        color:  violet;
-    }
-}
-//utilación de map y each en index.html
-$colors:(
-    whatsapp: lightgreen,
-    facebook: lightblue,
-    instagram: pink
-);                        
-@each $name-color, $color in $colors{
-    .#{$name-color}--color{
-        color: $color;
-        font-size: $tamFuente-xs;
-        font-style: italic;
+        color:  rgb(204, 12, 204);
     }
 }
 
@@ -49,11 +33,15 @@ $colors:(
     background-color: $color4;
     float: right;
     padding: 20px;
+    i{
+        color: rgb(17, 247, 17);
+        font-size: $tamFuente-s;
+        margin: 5px;
+    }
 }
 .div_contenedorCreadorWeb--color{
     background-image: linear-gradient($color4, $color1);
-    padding-top: 1em;
+    padding: 5px;
+    margin-top: auto;
 }
 /*fin pie de pagina*/
-
-

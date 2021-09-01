@@ -4,6 +4,8 @@ header{
 	background-image: radial-gradient($color2,$color3);
 	padding-top: 1%;
 	padding-bottom: 1%;
+    height: auto;
+    
 }
 
 .header__h1--centrado{
@@ -49,6 +51,6 @@ header{
 	height: 30%;
 	justify-content: center;
 	align-items: center;
-}
+    }
 }
 /*Fin seccion header*/

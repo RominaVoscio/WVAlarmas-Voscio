@@ -1,0 +1,220 @@
+/*aplicando Grids a la sección Producto*/
+.sectionProductos{
+    background-color: $color3;
+    width: 90%;
+    height: auto;
+    display:  grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: repeat(2, 2fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px #333;
+
+}
+.item{
+    background-color: $color5;
+    font-size: $tamFuente-s;
+    color: $color4;
+    border:  $bordes;
+    min-height: 200px;
+    min-width: 200px;
+}
+.item:hover{
+    transform: scale(1.2);
+    transition: all 800ms;
+    filter: grayscale(1);
+}
+.item1{
+    text-align: center;
+    background-image: url(Imagenes/combo1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.item2{
+    list-style-position: inside;
+    padding: 3px;
+}
+.item3{
+    text-align: center;
+    background-image: url(Imagenes/combo3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.item4{
+    list-style-position: inside;
+    padding: 3px;
+}
+.item5{
+    list-style-position: inside;
+    padding: 3px;
+}
+.item6{
+    text-align: center;
+    background-image: url(Imagenes/combo2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.item7{
+    list-style-position: inside;
+    padding: 3px;
+}
+.item8{
+    text-align: center;
+    background-image: url(Imagenes/camaras.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/*fin de Grids en la sección Producto*/
+
+/*Aplicando fondo a mi pagina oferta.html*/
+.bodyDegrade{
+    background-image: linear-gradient($color3, $color5, $color3);
+}
+/*centrando todo el cuerpo principal de mi página ofertas*/
+.cuerpoCentrado{
+    display:  grid;
+    place-items:  center;
+}
+/*Inicio Grids de la sección Oferta*/
+.contenedorOfertas{
+    background-color: $color3;
+    width: auto;
+    height: auto;
+    display:  grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px #333;
+}
+.items{
+    background-color: $color5;
+    font-size: $tamFuente-s;
+    color: $color4;
+    border:  $bordes;
+    min-height: 200px;
+    min-width: 200px;
+}
+.items:hover{
+    transform: scale(1.2);
+    transition: all 800ms;
+}
+
+/*Aplidando bucle  a Ofertas*/
+@for $i from 1 through 4{
+    .item-#{$i}{
+                background-image: url(Imagenes/imagen#{$i}.jpg);
+                background-size: cover;
+                background-position: center;
+                
+    }
+}
+/*haciendo reponsive la tabla de productos y ofertas*/
+@media (max-width: 1010px){
+    .sectionProductos{
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: repeat(4, 2fr); 
+    }
+    .item1{
+        text-align: center;
+        background-image: url(Imagenes/combo2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .item2{
+        list-style-position: inside;
+        padding: 3px;
+    }
+    .item3{
+        text-align: center;
+        background-image: url(Imagenes/camaras.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .item4{
+        list-style-position: inside;
+        padding: 3px;
+    }
+    .item5{
+        list-style-position: inside;
+        padding: 3px;
+    }
+    .item6{
+        text-align: center;
+        background-image: url(Imagenes/combo1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .item7{
+        list-style-position: inside;
+        padding: 3px;
+    }
+    .item8{
+        text-align: center;
+        background-image: url(Imagenes/combo3.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}
+@media (max-width: 580px){
+    .sectionProductos{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(8, 1fr); 
+        width: auto;
+    }
+    
+    .item1{
+        grid-row: 4;
+        text-align: center;
+        background-image: url(Imagenes/combo2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .item2{
+        grid-row: 3;
+        list-style-position: inside;
+        padding: 3px;
+    }
+    .item3{
+        grid-row: 8;
+        text-align: center;
+        background-image: url(Imagenes/camaras.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .item4{
+        grid-row: 7;
+        list-style-position: inside;
+        padding: 3px;
+    }
+    .item5{
+        grid-row: 1;
+        list-style-position: inside;
+        padding: 3px;
+    }
+    .item6{
+        grid-row: 2;
+        text-align: center;
+        background-image: url(Imagenes/combo1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .item7{
+        grid-row: 5;
+        list-style-position: inside;
+        padding: 3px;
+    }
+    .item8{
+        grid-row: 6;
+        text-align: center;
+        background-image: url(Imagenes/combo3.jpg);
+        background-size: cover;
+        background-position: center;
+    }  
+    .contenedorOfertas{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+}

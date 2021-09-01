@@ -6,17 +6,25 @@
     
 }
 .contenedorPregunta__h2--titulo{
-    background-color: $color1;
     text-align: center;
     font-family: $fuente1;
     font-size: $tamFuente-m;
     font-weight: bold;
+    color: $color2;
+    text-shadow: 0 0 10px #333;
+}
+.h3--fuenteEstilo2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: $tamFuente-xl;
+    font-weight: bold;
+    color: $color2;
 }
 
 .h3--fuenteEstilo3{
-    font-family: $fuente1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: $tamFuente-l;
     font-weight: bold;
+    color: $color4;
 }
 .h3--fuenteEstilo4{
     font-family: $fuente1;
